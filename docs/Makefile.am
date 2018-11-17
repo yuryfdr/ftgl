@@ -36,9 +36,7 @@ stamp-doxygen: doxygen.cfg stamp-eps
 
 latex/ftgl.pdf: stamp-latex
 stamp-latex: stamp-doxygen
-	rm -f latex/ftgl.tex latex/ftgl.pdf
-	mv latex/refman.tex latex/ftgl.tex
-	$(SED) -e 's/setlength{/renewcommand{/' < latex/ftgl.tex > latex/refman.tex
+	rm -f latex/ftgl.pdf
 	cd latex && $(MAKE) $(AM_CFLAGS) refman.pdf || (cat refman.log; exit 1)
 	mv latex/refman.pdf latex/ftgl.pdf
 	touch stamp-latex
