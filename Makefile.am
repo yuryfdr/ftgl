@@ -34,13 +34,13 @@ EXTRA_DIST = \
 
 # Print out an informative summary.
 all-local:
-	@$(ECHO) "Done."
-	@$(ECHO)
+	@echo "Done."
+	@echo
 	@if test "x$(MAKECMDGOALS)" = "xall-am" -o "x$(.TARGETS)" = "xall-am" -o "x$(MAKECMDGOALS)" = "x" -o "x$(.TARGETS)" = "x" ; then \
-	  $(ECHO) "---" ;\
-	  $(ECHO) "Run 'make install' to begin installation into $(prefix)" ;\
+	  echo "---" ;\
+	  echo "Run 'make install' to begin installation into $(prefix)" ;\
 	fi
-	@$(ECHO)
+	echo
 
 maintainer-clean-local:
 	-rm -rf .auto
