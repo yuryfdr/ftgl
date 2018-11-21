@@ -5,7 +5,7 @@ SET(CMAKE_MODULE_PATH ${FTGL_SOURCE_DIR})
 
 SET(VERSION_SERIES 2)
 SET(VERSION_MAJOR 3)
-SET(VERSION_MINOR 0)
+SET(VERSION_MINOR 1)
 SET(FTGL_SOVERSION 1)
 
 FIND_PACKAGE(Freetype REQUIRED) # if it fails, check this: https://bugs.launchpad.net/ubuntu/+source/cmake/+bug/826988

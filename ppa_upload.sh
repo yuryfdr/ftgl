@@ -2,7 +2,7 @@
 # build a debian sourcepackage and upload it to the launchpad ppa
 
 #:${VERSIONNBR:=$(parsechangelog | grep Version | sed -e "s/Version: //g" -e "s/\\~.*//g")}
-VERSIONNBR=2.3.0
+VERSIONNBR=2.3.1
 
 for DISTRIBUTION in precise quantal
 do
