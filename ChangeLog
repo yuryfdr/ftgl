@@ -15,6 +15,42 @@
 	  debian/rules:
 	  * Mark package as being version 2.3.0.
 
+2016-10-19 20:38  Richard Ulrich <richi@paraeasy.ch>
+
+  * Improved discovery for cmake
+
+2012-11-01 23:40  Richard Ulrich <richi@paraeasy.ch>
+
+  * Added the cmake finder to the debian/install file
+
+2012-09-24 21:06  Richard Ulrich <richi@paraeasy.ch>
+
+  * another try to get launchpad to build the package 
+
+2012-09-13 22:41  Richard Ulrich <richi@paraeasy.ch>
+
+  * not building the tests if cxxtest not found 
+
+2012-09-14 00:15  Richard Ulrich <richi@paraeasy.ch>
+
+  * added some tests 
+
+2012-01-26 21:19  Richard Ulrich <richi@paraeasy.ch>
+
+  * Fixed a bug with spaces in the text as reported on http://blog.ulrichard.ch/?p=64
+
+2011-11-09 22:09  Richard Ulrich <richi@paraeasy.ch>
+
+  * Added build dependency for cmake
+
+2011-11-09 22:09  Richard Ulrich <richi@paraeasy.ch>
+
+  * Changes for polygon extraction
+
+2011-09-01 22:09  Matthias Klose <doko@ubuntu.com>
+
+  * Build-depend on doxygen-latex. Closes: #616215. LP: #749191.
+
 2008-06-19 13:11  sammy
 
 	* [r1193] NEWS, configure.ac:
