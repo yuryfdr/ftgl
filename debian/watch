@@ -1,3 +1,2 @@
-version=3
-opts=uversionmangle=s/-/~/ \
-http://sf.net/ftgl/ftgl-([-\d\.rc]+)\.tar\.gz
+version=4
+https://github.com/frankheckenbach/ftgl/tags .*/v(\d[\d\.]+)\.(?:tgz|tbz|txz|(?:tar\.(?:gz|bz2|xz))|zip)

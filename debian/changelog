@@ -1,3 +1,24 @@
+ftgl (2.3.0-3) unstable; urgency=medium
+
+  [ IOhannes m zmölnig ]
+  * Copyright improvements:
+    - d/copyright: convert to standard format 1.0
+    - d/rules: add "licensecheck" target
+    - d/copyright_hints: helper to generate copyright file
+  * d/patches:
+    - document (add headers) to patches enable-docs.patch and
+      substitute-freetype-config.patch
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Mon, 19 Nov 2018 00:26:46 +0100
+
+ftgl (2.3.0-2) unstable; urgency=medium
+
+  * Release to unstable
+  * d/watch: Update for new upstream location
+  * d/control: Update Homepage URL
+
+ -- Manuel A. Fernandez Montecelo <mafm@debian.org>  Sun, 18 Nov 2018 23:48:43 +0100
+
 ftgl (2.3.0-1) experimental; urgency=medium
 
   * New upstream release
