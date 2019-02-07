@@ -88,6 +88,7 @@ static void DestroyHalo(FTGLglyph * baseGlyph, void *data)
 
 static FTGLglyph *MakeHaloGlyph(FT_GlyphSlot slot, void *data)
 {
+    (void) data;
     struct HaloGlyph *p = malloc(sizeof(struct HaloGlyph));
     FTGLglyph *baseGlyph = ftglCreatePolygonGlyph(slot, 0.0f, 1.0f);
     int i;
@@ -169,6 +170,8 @@ static void RenderScene(void)
  */
 static void ProcessKeys(unsigned char key, int x, int y)
 {
+    (void) x;
+    (void) y;
     switch(key)
     {
     case 27:

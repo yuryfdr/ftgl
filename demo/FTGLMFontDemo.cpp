@@ -241,7 +241,11 @@ void renderFontmetrics()
         glVertex3f(x2, y1, z1);
     glEnd();
     // Draw the back face
-    if((GetStyle() == FTGL_EXTRUDE) && (z1 != z2))
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wfloat-equal"
+    bool zd = z1 != z2;
+#pragma GCC diagnostic pop
+    if((GetStyle() == FTGL_EXTRUDE) && zd)
     {
         glBegin(GL_LINE_LOOP);
             glVertex3f(x1, y1, z2);
@@ -480,7 +484,7 @@ void myinit(int numFontFiles)
 }
 
 
-void parsekey(unsigned char key, int x, int y)
+void parsekey(unsigned char key, int, int)
 {
     switch (key)
     {
@@ -541,7 +545,7 @@ void parsekey(unsigned char key, int x, int y)
 }
 
 
-void parseSpecialKey(int key, int x, int y)
+void parseSpecialKey(int key, int, int)
 {
     FTSimpleLayout *l = NULL;
 	unsigned int s;

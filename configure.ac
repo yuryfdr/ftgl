@@ -73,7 +73,7 @@ dnl may conflict.
 CPPFLAGS="$CPPFLAGS -I\${top_srcdir}/src"
 
 # Warning flags
-BC_COMPILER_AND_LINKER_RECOGNIZES([-W -Wall -Wundef -Wfloat-equal  -Wpointer-arith -Wcast-align -Wcast-qual -Wshadow -Wsign-compare -Winline -Waggregate-return], [warning])
+BC_COMPILER_AND_LINKER_RECOGNIZES([-W -Wall -Wundef -Wfloat-equal  -Wpointer-arith -Wcast-align -Wcast-qual -Wshadow -Wsign-compare -Winline], [warning])
 BC_COMPILER_AND_LINKER_RECOGNIZES([-Wstrict-prototypes -Wmissing-prototypes -Wnested-externs], [warncflags], [no])
 if test "x$bc_warncflags_works" = "xyes" ; then
     CFLAGS="$CFLAGS -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs"

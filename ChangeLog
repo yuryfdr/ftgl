@@ -1,3 +1,18 @@
+2019-02-07 22:31  Frank Heckenbach <f.heckenbach@fh-soft.de>
+
+  * configure.ac: remove -Waggregate-return (returning aggregates is
+    usual in C++)
+
+  * src/FTCharToGlyphIndexMap.h, src/FTContour.cpp,
+    src/FTGL/FTLibrary.h, src/FTGlyph/FTBufferGlyph.cpp,
+    src/FTGlyph/FTExtrudeGlyph.cpp, src/FTGlyph/FTPixmapGlyph.cpp,
+    src/FTGlyph/FTTextureGlyph.cpp, src/FTGlyphContainer.cpp,
+    src/FTGlyphContainer.h, src/FTInternals.h,
+    src/FTLayout/FTSimpleLayout.cpp, src/FTPoint.cpp,
+    src/FTVectoriser.cpp, demo/FTGLDemo.cpp, demo/FTGLMFontDemo.cpp,
+    demo/c-demo.c, demo/simple.cpp, demo/trackball.c:
+    fix (if possible) or silence (otherwise) compiler warnings
+
 2019-02-07 21:05  Frank Heckenbach <f.heckenbach@fh-soft.de>
 
   * src/FTGL/FTLibrary.h, src/FTLibrary.cpp:

@@ -167,12 +167,15 @@ trackball(float q[4], float p1x, float p1y, float p2x, float p2y)
     float p1[3], p2[3], d[3];
     float t;
 
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wfloat-equal"
     if (p1x == p2x && p1y == p2y) {
         /* Zero rotation */
         vzero(q);
         q[3] = 1.0;
         return;
     }
+#pragma GCC diagnostic pop
 
     /*
      * First, figure out z-coordinates for projection of P1 and P2 to
