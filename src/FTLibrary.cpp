@@ -28,7 +28,7 @@
 #include "FTLibrary.h"
 #include "FTCleanup.h"
 
-const FTLibrary&  FTLibrary::Instance()
+const FTLibrary& FTLibrary::Instance()
 {
     static FTLibrary ftlib;
     return ftlib;

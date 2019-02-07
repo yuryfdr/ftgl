@@ -185,7 +185,7 @@ versions have changes attributed per contributor.
     * Removed the precache flag.
     * Unvirtualised functions in FTLibrary and FTGlyphContainer.
     * Fixed empty string bug in FTFont::BBox.
-    * Refactored FTContour and moved it to it's own file.
+    * Refactored FTContour and moved it to its own file.
     * Removed unnecessary memory allocations in vector Glyphs. They
       now access the vector data directly.
     * Made vectoriser a local variable in vector glyphs.

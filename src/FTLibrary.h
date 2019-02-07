@@ -44,7 +44,7 @@
  *
  * Just because this class returns a valid <code>FTLibrary</code> object
  * doesn't mean that the Freetype Library has been successfully initialised.
- * Clients should check for errors. You can initialse the library AND check
+ * Clients should check for errors. You can initialise the library AND check
  * for errors using the following code...
  * <code>err = FTLibrary::Instance().Error();</code>
  *
@@ -86,7 +86,7 @@ class FTLibrary
         /**
          * Default constructors.
          *
-         * Made private to stop clients creating there own FTLibrary
+         * Made private to stop clients creating their own FTLibrary
          * objects.
          */
         FTLibrary();

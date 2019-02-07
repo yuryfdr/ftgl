@@ -4690,7 +4690,7 @@
 2002-12-08 04:40  henry
 
 	* [r484] include/FTVectoriser.h, src/FTVectoriser.cpp:
-	  Refactored FTContour - moved it into it's own file
+	  Refactored FTContour - moved it into its own file
 
 2002-12-08 04:38  henry
 
@@ -4968,12 +4968,12 @@
 2002-11-27 07:12  henry
 
 	* [r433] include/FTVectoriser.h, src/FTVectoriser.cpp:
-	  Moved FTPoint to it's own file
+	  Moved FTPoint to its own file
 
 2002-11-27 06:35  henry
 
 	* [r432] include/FTBBox.h, include/FTPoint.h, src/FTPoint.cpp:
-	  Moved these classes to there own files
+	  Moved these classes to their own files
 
 2002-11-27 06:20  henry
 
