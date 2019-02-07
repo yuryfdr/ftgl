@@ -48,6 +48,7 @@ ftgl_HEADERS = $(ftgl_headers)
 
 ftgl_headers = \
     FTGL/ftgl.h \
+    FTGL/FTLibrary.h \
     FTGL/FTBBox.h \
     FTGL/FTBuffer.h \
     FTGL/FTPoint.h \

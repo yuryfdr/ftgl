@@ -180,7 +180,7 @@ Files: ./demo/FTGLDemo.cpp
  ./src/FTFace.h
  ./src/FTGlyphContainer.h
  ./src/FTLibrary.cpp
- ./src/FTLibrary.h
+ ./src/FTGL/FTLibrary.h
  ./src/FTList.h
  ./src/FTSize.cpp
  ./src/FTSize.h

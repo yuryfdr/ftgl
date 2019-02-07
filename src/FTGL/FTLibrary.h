@@ -26,12 +26,14 @@
 #ifndef     __FTLibrary__
 #define     __FTLibrary__
 
+#ifdef __cplusplus
+
 #include <ft2build.h>
 #include FT_FREETYPE_H
 //#include FT_CACHE_H
 
 #include "FTGL/ftgl.h"
-
+#include <atomic>
 
 /**
  * FTLibrary class is the global accessor for the Freetype library.
@@ -59,7 +61,7 @@ class FTLibrary
          *
          * @return  The global <code>FTLibrary</code> object.
          */
-        static const FTLibrary& Instance();
+        static FTLibrary& Instance();
 
         /**
          * Gets a pointer to the native Freetype library.
@@ -81,6 +83,18 @@ class FTLibrary
          * Disposes of the Freetype library
          */
         ~FTLibrary();
+
+        /**
+         * See README-LegacyOpenGLState
+         *
+         * Choose incompatible legacy behaviour, see commit
+         * 29603ae3fa88c5b9e079a6db23be2cdea95aef39.
+         *
+         * May only be set to the same value (but any number of times)
+         * within one program.
+         */
+        void LegacyOpenGLState(bool On);
+        bool GetLegacyOpenGLStateSet() const { return LegacyOpenGLStateHandling; }
 
     private:
         /**
@@ -117,6 +131,12 @@ class FTLibrary
          */
         FT_Error err;
 
+        /**
+         * Flag set by LegacyOpenGLState, -1 means implicitly on (default).
+         */
+        std::atomic <int> LegacyOpenGLStateHandling;
 };
+
+#endif //__cplusplus
 
 #endif  //  __FTLibrary__

@@ -1,19 +1,37 @@
+2019-02-07 21:05  Frank Heckenbach <f.heckenbach@fh-soft.de>
+
+  * src/FTGL/FTLibrary.h, src/FTLibrary.cpp:
+    new setting LegacyOpenGLState(), see README-LegacyOpenGLState
+
+  * README-LegacyOpenGLState: new file
+
+  * src/FTLibrary.h: move to src/FTGL
+  * src/FTGL/ftgl.h: include FTLibrary.h
+  * src/Makefile.am, src/CMakeLists.txt: add FTGL/FTLibrary.h
+
+  * src/FTFont/FTBitmapFont.cpp,
+    src/FTFont/FTBufferFont.cpp,
+    src/FTFont/FTOutlineFont.cpp,
+    src/FTFont/FTPixmapFont.cpp,
+    src/FTFont/FTTextureFont.cpp:
+    use FTLibrary::Instance().GetLegacyOpenGLStateSet()
+
 2018-11-21 01:45  Frank Heckenbach <f.heckenbach@fh-soft.de>
 
-	* NEWS, configure.ac, ppa_upload.sh, msvc/config.h, CMakeLists.txt:
-	  * Mark package as being version 2.3.1.
+  * NEWS, configure.ac, ppa_upload.sh, msvc/config.h, CMakeLists.txt:
+    * Mark package as being version 2.3.1.
 
 2018-11-18 01:00  Frank Heckenbach <f.heckenbach@fh-soft.de>
 
-	* configure.ac: find FT2 via PKG_CHECK_MODULES instead of freetype2.m4
-	* Makefile.am: remove reference to m4/freetype2.m4
-	* m4/freetype2.m4: removed
+  * configure.ac: find FT2 via PKG_CHECK_MODULES instead of freetype2.m4
+  * Makefile.am: remove reference to m4/freetype2.m4
+  * m4/freetype2.m4: removed
 
 2018-10-14 21:17  Frank Heckenbach <f.heckenbach@fh-soft.de>
 
-	* NEWS, configure.ac, ppa_upload.sh, msvc/config.h, CMakeLists.txt,
-	  debian/rules:
-	  * Mark package as being version 2.3.0.
+  * NEWS, configure.ac, ppa_upload.sh, msvc/config.h, CMakeLists.txt,
+    debian/rules:
+    * Mark package as being version 2.3.0.
 
 2016-10-19 20:38  Richard Ulrich <richi@paraeasy.ch>
 

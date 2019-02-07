@@ -134,6 +134,8 @@ namespace FTGL
     #define FTGL_EXPORT
 #endif
 
+#include <FTGL/FTLibrary.h>
+
 #include <FTGL/FTPoint.h>
 #include <FTGL/FTBBox.h>
 #include <FTGL/FTBuffer.h>
