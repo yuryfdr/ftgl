@@ -1,3 +1,8 @@
+2019-02-07 22:35  Frank Heckenbach <f.heckenbach@fh-soft.de>
+
+  * NEWS, configure.ac, ppa_upload.sh, msvc/config.h, CMakeLists.txt:
+    * Mark package as being version 2.4.0.
+
 2019-02-07 22:31  Frank Heckenbach <f.heckenbach@fh-soft.de>
 
   * configure.ac: remove -Waggregate-return (returning aggregates is

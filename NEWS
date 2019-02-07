@@ -8,6 +8,13 @@ been released to date.  All versions prior to and including version
 versions have changes attributed per contributor.
 
 ----------------------------------------------------------------------
+--- 2019-02-07  Release 2.4.0                                      ---
+----------------------------------------------------------------------
+
+    * New setting LegacyOpenGLState(), see README-LegacyOpenGLState
+    * Fix/silence compiler warnings
+
+----------------------------------------------------------------------
 --- 2018-11-21  Release 2.3.1                                      ---
 ----------------------------------------------------------------------
 
