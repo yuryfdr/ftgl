@@ -1,4 +1,8 @@
-2019-02-08 00:44 Manuel A. Fernandez Montecelo
+2019-02-23 16:41  Frank Heckenbach <f.heckenbach@fh-soft.de>
+
+  * ftgl-release: new script
+
+2019-02-08 00:44  Manuel A. Fernandez Montecelo
 
   * docs/projects_using_ftgl.txt: fix duplicated entry in doc
 
