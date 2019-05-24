@@ -232,7 +232,7 @@ inline FTPoint FTBufferFontImpl::RenderI(const T* string, const int len,
     bool inCache = false;
 
     // Protect blending functions, GL_TEXTURE_2D and optionally GL_BLEND
-    glPushAttrib(GL_COLOR_BUFFER_BIT | GL_ENABLE_BIT | GL_TEXTURE_ENV_MODE);
+    glPushAttrib(GL_COLOR_BUFFER_BIT | GL_ENABLE_BIT | GL_TEXTURE_BIT);
 
     // Protect glPixelStorei() calls
     glPushClientAttrib(GL_CLIENT_PIXEL_STORE_BIT);

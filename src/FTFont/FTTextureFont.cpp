@@ -241,7 +241,7 @@ inline FTPoint FTTextureFontImpl::RenderI(const T* string, const int len,
                                           int renderMode)
 {
     // Protect GL_TEXTURE_2D and optionally GL_BLEND
-    glPushAttrib(GL_ENABLE_BIT | GL_COLOR_BUFFER_BIT | GL_TEXTURE_ENV_MODE);
+    glPushAttrib(GL_ENABLE_BIT | GL_COLOR_BUFFER_BIT | GL_TEXTURE_BIT);
 
     if(FTLibrary::Instance().GetLegacyOpenGLStateSet())
       {
