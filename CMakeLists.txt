@@ -74,3 +74,12 @@ install(EXPORT FTGL-targets DESTINATION "${cmakedir}")
 install(
   FILES       "${CMAKE_CURRENT_BINARY_DIR}/CMakeFiles/FTGLConfig.cmake"
   DESTINATION "${cmakedir}")
+
+SET(PKGCONFIG_INSTALL_PREFIX "lib${LIB_SUFFIX}/pkgconfig/" CACHE STRING "Base directory for pkgconfig files")
+CONFIGURE_FILE(
+  ${CMAKE_CURRENT_SOURCE_DIR}/ftgl.pc.cmake 
+  ${CMAKE_CURRENT_BINARY_DIR}/ftgl.pc 
+  @ONLY)
+INSTALL(
+  FILES       ${CMAKE_CURRENT_BINARY_DIR}/ftgl.pc
+  DESTINATION ${PKGCONFIG_INSTALL_PREFIX})
