@@ -8,9 +8,9 @@ AC_REQUIRE([AC_PATH_X])dnl
 AC_REQUIRE([AC_PATH_XTRA])dnl
 AC_REQUIRE([FTGL_CHECK_GL])dnl
 
-AC_ARG_WITH([--with-glut-inc],
+AC_ARG_WITH([glut-inc],
     AC_HELP_STRING([--with-glut-inc=DIR],[Directory where GL/glut.h is installed (optional)]))
-AC_ARG_WITH([--with-glut-lib],
+AC_ARG_WITH([glut-lib],
     AC_HELP_STRING([--with-glut-lib=DIR],[Directory where GLUT libraries are installed (optional)]))
 
 AC_LANG_SAVE
