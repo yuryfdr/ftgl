@@ -50,7 +50,7 @@ LIBS="$LIBS -Xlinker -framework -Xlinker OpenGL"
 # -Xlinker is used because libtool is busted prior to 1.6 wrt frameworks
 AC_TRY_LINK([#include <OpenGL/gl.h>], [glBegin(GL_POINTS)],
     [GL_DYLIB="/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib"
-     FRAMEWORK_OPENGL="-Xlinker -framework -Xlinker OpenGL -dylib_file $GL_DYLIB: $GL_DYLIB"
+     FRAMEWORK_OPENGL="-Xlinker -framework -Xlinker OpenGL -dylib_file $GL_DYLIB:$GL_DYLIB"
      ac_cv_search_glBegin="$FRAMEWORK_OPENGL"
      AC_MSG_RESULT(yes)],
     [AC_MSG_RESULT(no)])
