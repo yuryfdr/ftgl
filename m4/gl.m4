@@ -7,11 +7,11 @@ AC_REQUIRE([AC_PROG_CC])
 AC_REQUIRE([AC_PATH_X])
 AC_REQUIRE([AC_PATH_XTRA])
 
-AC_ARG_WITH([--with-gl-inc],
+AC_ARG_WITH([gl-inc],
     AC_HELP_STRING([--with-gl-inc=DIR],[Directory where GL/gl.h is installed]))
-AC_ARG_WITH([--with-gl-lib],
+AC_ARG_WITH([gl-lib],
     AC_HELP_STRING([--with-gl-lib=DIR],[Directory where OpenGL libraries are installed]))
-AC_ARG_WITH([--with-glu-lib],
+AC_ARG_WITH([glu-lib],
     AC_HELP_STRING([--with-glu-lib=DIR],[Directory where OpenGL GLU library is installed]))
 
 AC_LANG_SAVE
