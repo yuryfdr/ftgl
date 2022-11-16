@@ -530,8 +530,8 @@ void myinit(const char* file)
 
 /*
  * Simple conversion from Unicode character to UTF-8 string.
- * (In real code, you may want want to use a library such as ICU
- * or newer C++ features instead, but this avoids additional dependencies.
+ * (In real code, you may want want to use a library such as ICU or
+ * newer C++ features instead, but this avoids additional dependencies.)
  * s must contain enough space for up to 4 bytes.
  * Returns number of bytes written.
  */
