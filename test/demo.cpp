@@ -17,7 +17,7 @@ static FTFont* fonts[5];
 static int width;
 static int height;
 
-
+#include "Fontdefs.h"
 // YOU'LL PROBABLY WANT TO CHANGE THESE
 #ifdef __linux__
 #   define DEFAULT_FONT "/usr/share/fonts/truetype/arial.ttf"
@@ -288,7 +288,7 @@ main(int argc, char **argv)
     else
     {
         // try a default font
-        fontFilePath = DEFAULT_FONT;
+        fontFilePath = FONT_FILE;
 
         if (!file_exists(fontFilePath))
         {

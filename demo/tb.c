@@ -9,13 +9,7 @@
 #include <math.h>
 #include <assert.h>
 
-#if defined HAVE_GL_GLUT_H
-#   include <GL/glut.h>
-#elif defined HAVE_GLUT_GLUT_H
-#   include <GLUT/glut.h>
-#else
-#   error GLUT headers not present
-#endif
+#include <GL/glut.h>
 
 #include "tb.h"
 #include "trackball.h"

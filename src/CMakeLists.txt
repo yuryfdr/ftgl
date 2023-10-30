@@ -1,9 +1,4 @@
-
-
-
-INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/cmake)
-
-
+project(ftgl)
 ADD_DEFINITIONS(-DPACKAGE_VERSION="${VERSION_SERIES}.${VERSION_MAJOR}.${VERSION_MINOR}")
 
 IF(WIN32)
@@ -116,19 +111,25 @@ SET(ftlayout_sources
 )
 
 
-ADD_LIBRARY(ftgl ${libftgl_la_SOURCES} ${ftgl_headers} ${ftglyph_sources} ${ftfont_sources} ${ftlayout_sources})
-TARGET_LINK_LIBRARIES(ftgl
-	${FREETYPE_LIBRARIES}
-	${OPENGL_LIBRARIES}
+add_library(ftgl ${libftgl_la_SOURCES} ${ftgl_headers} ${ftglyph_sources} ${ftfont_sources} ${ftlayout_sources})
+target_include_directories(ftgl
+    PUBLIC
+    $<BUILD_INTERFACE:${CMAKE_SOURCE_DIR}/cmake>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/FTFont>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/FTGL>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/FTGlyph>
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/FTLayout>
+    $<INSTALL_INTERFACE:include>
+)
+target_link_libraries(ftgl
+        Freetype::Freetype
+        OpenGL::OpenGL OpenGL::GLU
 )
 
-IF(NOT BUILD_SHARED_LIBS)
-	TARGET_LINK_LIBRARIES(ftgl ${OPENGL_LIBRARIES})
-ENDIF()
-
-SET_TARGET_PROPERTIES(
+set_target_properties(
     ftgl
-  PROPERTIES
+    PROPERTIES
     VERSION ${VERSION_SERIES}.${VERSION_MAJOR}.${VERSION_MINOR}
 	SOVERSION ${FTGL_SOVERSION}
     DEBUG_POSTFIX "d"
@@ -136,7 +137,7 @@ SET_TARGET_PROPERTIES(
 
 INSTALL(TARGETS   ftgl                         	  
     EXPORT  FTGL-targets
-	RUNTIME DESTINATION bin
+    RUNTIME DESTINATION bin
     LIBRARY DESTINATION lib
     ARCHIVE DESTINATION lib
 )
